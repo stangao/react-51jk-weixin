@@ -1,0 +1,228 @@
+/*
+    底部菜单栏
+*/
+@import '../../Style/style.less';
+/*
+    @style-bg: #efeff4;
+    @style-main : #fff;
+    @style-color: #2c3e50;
+    @font-color-L:#333;
+    @font-color-M:#666;
+    @font-color-s:#999;
+    @link-color:#0894ec;
+    @line-color:#e3e3e3;
+    @red-color:#ff5e43;
+    @font-size-XL:0.5rem;
+    @font-size-L:0.4rem;
+    @font-size-M:0.2rem;
+    @font-size-S:0.18rem;
+    @font-size-SM:0.14rem;
+*/
+.PersonalHead-box{
+    height:3rem;
+    padding: 0.7rem 0.5rem;
+    display: -webkit-box; 
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background: -webkit-linear-gradient(right, #556c95, #8eadb0,#b2afa0,#d17e61); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #556c95, #8eadb0,#b2afa0,#d17e61); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #556c95, #8eadb0,#b2afa0,#d17e61); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #556c95, #8eadb0,#b2afa0,#d17e61); /* 标准的语法 */
+    .people-head{
+        width: 2.4rem;
+        margin-right: 0.5rem;
+        
+        img{
+           border-radius:1.8rem; 
+        }        
+    }
+    .people-info{
+        flex: 1;
+        font-family: "SimHei";
+        p{
+            color: @style-main;
+            font-size: 0.44rem;
+            margin-top: 0.2rem;
+            span{
+                padding: 0.06rem 0.1rem;
+                border: 1px solid @style-main;
+                border-radius: 0.2rem;
+            }
+            &.user-checkIn{
+                font-size: 0.38rem;
+            }
+            &.user-checkIn-text{
+                font-size: 0.3rem;
+                margin-top: 0.3rem;
+            }
+        }
+    }    
+}
+.PersonalMain-box{
+    font-family: "SimHei";
+    .user-list-top{
+        margin-top: 0.3rem;
+    }
+    .user-common-list{
+        display: -webkit-box; 
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin-bottom: 0.06rem;
+        background: @style-main;
+        line-height:1rem ;
+        text-align: center;
+        .common-list-left{
+            width: 1rem;
+            height: 1rem;
+            
+            .inconfont{
+                font-size:0.4rem;
+            }
+            .icon-my-order{ 
+                &:before{
+                  content: "\e607"; 
+                }
+            }
+            .icon-my-score{ 
+                &:before{
+                  content: "\e608"; 
+                }
+            }
+            .icon-my-code{ 
+                &:before{
+                  content: "\e609"; 
+                }
+            }
+            .icon-my-coupon{ 
+                &:before{
+                  content: "\e60a"; 
+                }
+            }
+            .icon-my-adress{ 
+                &:before{
+                  content: "\e60b"; 
+                }
+            }
+            .icon-my-account{ 
+                &:before{
+                  content: "\e60c"; 
+                }
+            }
+            .icon-my-phone{ 
+                &:before{
+                  content: "\e60e"; 
+                }
+            }
+            .icon-my-server{ 
+                &:before{
+                  content: "\e628"; 
+                }
+            }
+            .icon-my-public{ 
+                color: #00bb5c;
+                &:before{
+                  content: "\e60f"; 
+                }
+            }
+        }  
+        .common-list-center{
+            flex: 1;
+            text-align: left;
+            font-size:0.38rem;
+            em{
+                font-style: normal;
+                color: @style-main;
+                background: @red-color;
+                border-radius: 0.5rem;
+                padding: 0 0.1rem; 
+                font-family: arial;
+            }
+        }
+        .common-list-right{
+            color: @font-color-s;
+            .icon-user-arrow{
+                font-size:0.34rem; 
+                margin-left:0.2rem; 
+               &:before{
+                  content: "\e611"; 
+                } 
+            }
+        } 
+    }
+    .user-order-box{
+        padding: 0.2rem 0.4rem;
+        background: @style-main;
+        div{
+            display: -webkit-box; 
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            a{
+               flex: 1; 
+            }
+            .iconfont{
+                font-size: 1.6rem;
+                
+            }
+            .icon-pay-money{
+                color: #33bceb;
+                &:before{
+                  content: "\e613"; 
+                } 
+            }
+            .icon-get-goods{
+                color: #39cbbf;
+                &:before{
+                  content: "\e614"; 
+                } 
+            } 
+            .icon-take-goods{
+                color: #ff9945;
+                &:before{
+                  content: "\e615"; 
+                } 
+            } 
+            .icon-have-complete{
+                color: #ff846f;
+                &:before{
+                  content: "\e61f"; 
+                } 
+            }  
+        }
+    }
+} 
+.am-modal-close-x:after {
+    display: none !important;
+}
+.am-modal-content .am-modal-body{
+    margin-top: 0.2rem !important;
+    color: #666666 !important;
+}
+.am-modal-content .am-modal-title{
+    color: #666666 !important;
+}
+.user-order-box .iconfont{
+    position: relative;
+}
+.user-order-box .iconfont em{
+    box-sizing: border-box;
+    padding:0 0.1rem;
+    position: absolute;
+    right: -0.1rem;
+    top: -0.1rem;
+    background: #ff5e43 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.20rem;
+    height: 0.4rem !important;
+    line-height: 0.4rem;
+    min-width: 0.4rem;
+    text-align: center;
+}
+   .Dial{display: block;} 

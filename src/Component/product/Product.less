@@ -1,0 +1,263 @@
+/*
+    底部菜单栏
+*/
+@import '../../Style/style.less';
+/*
+    @style-bg: #efeff4;
+    @style-main : #fff;
+    @style-color: #2c3e50;
+    @font-color-L:#333;
+    @font-color-M:#666;
+    @font-color-s:#999;
+    @link-color:#0894ec;
+    @line-color:#e3e3e3;
+    @red-color:#ff5e43;
+    @font-size-XL:0.5rem;
+    @font-size-L:0.4rem;
+    @font-size-M:0.2rem;
+    @font-size-S:0.18rem;
+    @font-size-SM:0.14rem;
+*/
+.productHead-box{
+   position: relative;
+   .product-top-code{
+       position: absolute;
+       top:0.2rem;
+       right: 0.2rem;
+       .icon-code{
+           font-size:0.8rem; 
+           &:before{
+              content: "\e605"; 
+           }
+       }
+   } 
+}
+
+/*图片弹出层*/
+.code-pop-box{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    .code-pop-main{
+        /*定义为flexbox的"父元素"*/
+            display: -webkit-box; 
+            display: -webkit-flex;
+            display: flex;
+            /*定义子元素垂直居中*/
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            z-index: 4;
+            div{
+                flex: 1;
+                padding: 1rem;
+                margin: 1rem;
+                height: auto;
+                background: @style-main;
+            }
+            
+    }
+}
+.productMain-box{
+    color: @font-color-M;
+    font-family: "SimHei";
+    .productMain-top{
+       background:@style-main;
+       padding:0.2rem;
+       margin-top: 0.2rem;  
+    }
+    .detalis-title{
+        font-size:@font-size-L;
+        margin-bottom: 0.3rem;
+    }
+    .detalis-info{
+        font-size: @font-size-M;
+        line-height: 0.5rem;
+    }
+    .detalis-price{
+        padding: 0.3rem 0;
+        .real-price{
+            font-size: 0.8rem;
+            color:@red-color;
+            margin-right: 0.4rem;
+        }
+        .market-price{
+            font-size:@font-size-L;
+            color: @font-color-s;
+        } 
+    }
+    .detalis-norm-mian{
+        padding-left: 0.2rem;
+        display: block;
+        height: 1rem;
+        padding-top: 0.2rem;
+        span{
+            padding: 0.16rem 0.5rem;
+            border: 1px solid @red-color;
+            border-radius: 0.5rem;
+            font-size: @font-size-M;
+            color: @red-color;
+        }
+    }
+    .detalis-num-box{
+        display: -webkit-box; 
+        display: -webkit-flex;
+        display: flex;
+        /*定义子元素垂直居中*/
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+
+        span{
+            width:1rem ;
+            .iconfont{
+               font-size: 0.7rem; 
+            }
+            .icon-num-minus{
+                &:before{
+                   content: "\e61c";  
+                }
+            }
+            .icon-num-add{
+                &:before{
+                    content: "\e61d"; 
+                }
+            }
+        }
+        input{
+            flex: 1;
+            width: 1.4rem;
+            text-align: center;
+            font-size: 0.4rem;
+        }
+    }
+    .productMain-middle{
+        background: @style-main;
+        margin-top: 0.2rem;
+        padding: 0.2rem;      
+        p{
+            display: -webkit-box; 
+            display: -webkit-flex;
+            display: flex;
+            line-height: 0.6rem;
+        }
+        .red-font{
+            color: @red-color;
+        }
+        .detalis-info-title{
+            font-size: 0.46rem;
+            margin-bottom: 0.3rem;
+        }
+        .detalis-info-name{
+            font-size: 0.36rem;
+            width: 2.5rem;
+        }
+        .detalis-info-text{
+            font-size: 0.36rem;
+            flex: 1;
+        }
+        .detalis-info-btn{
+            border-top: 1px solid @line-color;
+            font-size: 0.36rem;
+            text-align: center;
+            padding: 0.3rem 0 0.1rem;
+            margin-top: 0.2rem;
+            color: @red-color;
+        }
+        .detalis-info-hide{display: none;}
+    }
+    .productMain-bottom{
+        margin-top: 0.2rem;
+        .am-tabs-bar{
+            .am-tabs-tab{
+                height: 1rem;
+                line-height: 1rem;
+                font-size: 0.4rem;
+            }
+            .am-tabs-tab-active{
+                color: @red-color;
+            }
+        } 
+        .am-tabs-ink-bar{
+            background-color:@red-color ;
+        }
+        .am-tabs-tabpane{
+            div{
+                min-height: 6rem;
+                background: none;
+            }
+        }
+    } 
+    
+}
+.productFoot-box{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 0.8rem;
+    padding: 0.3rem 0;
+    background: @style-main;
+    width: 100vw; 
+    .productFoot-btn{
+        width: 50vw;
+        display: inline-block;
+        text-align: center;
+        a{
+            padding: 0 0.4rem;
+            border: 1px solid @link-color;
+            border-radius:2rem ;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            display: block;
+            margin: ;
+            margin: 0 0.2rem 0 0.4rem;
+            &.obligate-info{
+                margin: 0 0.4rem 0 0.2rem;
+                background: @link-color;
+                color: @style-main;  
+            }
+        }    
+    }   
+}
+.productMain-bottom{
+        .No{
+            text-align: center;
+            line-height: 6rem;
+            font-size: 0.36rem;
+        }
+        .evalution:last-child{
+            margin-bottom:1.2rem ;
+        }
+        .evalution{
+            color: #666666;
+            margin-top: 0.06rem;
+            margin-bottom: 0.14rem;
+            padding: 0.2rem;
+            font-size:0.36rem ;
+            box-sizing: border-box;
+            background: white;
+            .user{
+                float: left;
+            }
+            .time{
+                color: darkgrey;
+                float: right;
+            }
+            .content{
+                display: block;
+            }
+        }
+}
+
+

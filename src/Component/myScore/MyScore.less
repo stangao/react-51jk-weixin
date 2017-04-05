@@ -1,0 +1,88 @@
+/*
+    底部菜单栏
+*/
+@import '../../Style/style.less';
+/*
+    @style-bg: #efeff4;
+    @style-main : #fff;
+    @style-color: #2c3e50;
+    @font-color-L:#333;
+    @font-color-M:#666;
+    @font-color-s:#999;
+    @link-color:#0894ec;
+    @line-color:#e3e3e3;
+    @red-color:#ff5e43;
+    @font-size-XL:0.5rem;
+    @font-size-L:0.4rem;
+    @font-size-M:0.2rem;
+    @font-size-S:0.18rem;
+    @font-size-SM:0.14rem;
+*/
+.MyScoreHead-box{
+  padding: 0.2rem;
+  background: @style-main;
+  margin-bottom: 0.1rem;
+  font-family: "SimHei";
+  font-size: 0.36rem;
+  p{
+      line-height: 1rem;
+      color:@font-color-M;
+      span{
+          color: @red-color;
+          padding: 0 0.2rem 0 0.4rem;
+      }
+  }  
+}
+.MyScoreMain-box{
+    .No{
+        text-align: center;
+        line-height: 5.8rem;
+        font-size: 0.38rem;
+    }
+    font-family: "SimHei";
+    .am-tabs-bar{
+        .am-tabs-tab{
+            height: 1rem;
+            line-height: 1rem;
+            font-size: 0.4rem;
+        }
+        .am-tabs-tab-active{
+            color: @red-color;
+        }
+    } 
+    .am-tabs-ink-bar{
+        background-color:@red-color;
+    }
+    .am-tabs-tabpane{
+        .my-score-box{
+            .my-score-list{
+                display: -webkit-box; 
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 1.8rem;
+                background: @style-main;
+                border-bottom: 1px solid @line-color;
+                padding: 0 0.2rem;
+                .my-score-list-left{
+                    flex: 1;
+                    p{
+                       padding:0 0 0.1rem 0; 
+                       font-size: 0.36rem;
+                       &.my-score-list-time{
+                           font-size: @font-size-S;
+                       }
+                    }
+                    .large{
+                        font-size: 0.36rem !important;
+                    }      
+                                        
+                } 
+                .my-score-list-num{
+                    color: #34C9BD;
+                }
+            }
+        } 
+    }   
+}

@@ -1,0 +1,73 @@
+/*
+    @style-bg: #efeff4;
+    @style-main : #fff;
+    @style-color: #2c3e50;
+    @font-color-L:#333;
+    @font-color-M:#666;
+    @font-color-s:#999;
+    @link-color:#0894ec;
+    @line-color:#e3e3e3;
+    @red-color:#ff5e43;
+    @font-size-XL:0.5rem;
+    @font-size-L:0.4rem;
+    @font-size-M:0.2rem;
+    @font-size-S:0.18rem;
+    @font-size-SM:0.14rem;
+*/
+@import '../../Style/style.less';
+.indexMenu{ 
+    ul{
+        width: 100vw;
+        /*定义为flexbox的"父元素"*/
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ 
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ 
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        margin-left: -1%;
+        overflow: hidden;
+        li{ 
+            box-sizing: border-box;
+            -webkit-box-flex: 0 0 31.33%; /* OLD - iOS 6-, Safari 3.1-6 */ 
+            -moz-box-flex: 0 0 31.33%; /* OLD - Firefox 19- */ 
+            -webkit-flex: 0 0 31.33%; /* Chrome */ 
+            -ms-flex: 0 0 31.33%; /* IE 10 */ 
+            flex: 0 0 31.33%;
+            margin-left: 2%;
+            margin-top: 2%;
+            
+            background-color:@style-main;
+            div{
+                display: block;
+                align-items: flex-start;
+                width:2.92999rem;
+                height: 1rem;
+                line-height: 1rem;
+                padding: 0 0.1rem;
+                a{
+                    /*定义为flexbox的"父元素"*/
+                    display: -webkit-box; 
+                    display: -webkit-flex;
+                    display: flex;
+                    align-items: flex-start;
+                    width:3.34rem;
+                    img{width: 0.8rem; height:0.8rem; padding-top: 0.1rem;padding-right: 0.1rem; }     
+                    span{
+                        flex: 1;
+                        font-size: @font-size-L;
+                        vertical-align: 50%;
+                        display: block;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        height: 1rem;
+                        line-height: 1rem;
+                        width: 2.44rem;
+                    }    
+                } 
+            }       
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export const target = process.env.NODE_ENV !== 'production' ? '' : 'http://api.weixin.51jk.com'; //目标网站

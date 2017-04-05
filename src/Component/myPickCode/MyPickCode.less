@@ -1,0 +1,72 @@
+@import "../../Style/style.less";
+@text-XL: 0.5rem;
+@text-L: 0.4rem;
+@text-M: 0.33rem;
+@color-order-active: #ff5d42;
+.index-list-box{
+    .calculatesuccess {
+        margin: 2.0rem 0.5rem 0;
+        p {
+            text-align: center;
+        }
+        .calculatesuccess-ti {
+            font-size: @text-XL;
+        }
+        .calculatesuccess-nr {
+            font-size: @text-L;
+            margin: 0.4rem 0;
+        }
+        .myPickCodeTop{
+            height: 1rem;
+            line-height: 1rem;
+            font-family: "SimHei";
+            border: 1px solid @line-color;
+            font-size:@text-L;
+            text-align: left;
+            span{
+                padding-left: 0.2rem;
+            }
+            .icon-pickCode-arrow{
+                float: right;
+                font-size: 0.4rem;
+                color:@color-lightgrey; 
+                &:before {
+                    content: "\e611";
+                } 
+            }
+        }
+        .calculatesuccess-cont {
+            background: @color-white;
+            border: 1px solid @color-cgrey;
+            padding: 0.4rem;
+            position: relative;
+        }
+        .earth {
+            position: absolute;
+            right: 0.3rem;
+            top: 0.3rem;
+            i {
+                color: @link-color;
+                font-size: 0.6rem;
+            }
+        }
+        .calculatesuccess-cont-ti {
+            font-size: @text-XL;
+        }
+        .calculatesuccess-cont-nr {
+            font-size: @text-L;
+            margin-top: 0.4rem;
+        }
+        .thm {
+            width: 5.0rem;
+            margin-top: 0.4rem;
+        }
+        button {
+            background: #76d672;
+            color: @color-white;
+            padding: 0.4rem 0;
+            width: 100%;
+            margin-top: 0.6rem;
+        }
+    }
+}

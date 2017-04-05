@@ -1,0 +1,330 @@
+/*
+    底部菜单栏
+*/
+@import '../../Style/style.less';
+/*
+    @style-bg: #efeff4;
+    @style-main : #fff;
+    @style-color: #2c3e50;
+    @font-color-L:#333;
+    @font-color-M:#666;
+    @font-color-s:#999;
+    @link-color:#0894ec;
+    @line-color:#e3e3e3;
+    @red-color:#ff5e43;
+    @font-size-XL:0.5rem;
+    @font-size-L:0.4rem;
+    @font-size-M:0.2rem;
+    @font-size-S:0.18rem;
+    @font-size-SM:0.14rem;
+*/
+.cartHead-box{
+   position: relative;
+   width: 100vw;
+   background: @style-main;
+   .cartHead-main{
+       position: fixed;
+       top:0;
+       left:0;
+       height:1.4rem;
+       width: 100vw;
+       line-height: 1.4rem;
+       background: @style-main;
+       border-bottom: 1px solid #f1f1f1;
+       display: -webkit-box; 
+        display: -webkit-flex;
+        display: flex;
+        /*定义子元素垂直居中*/
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .cartHead-left{
+            width: 1rem;
+            padding-top:0.2rem ;
+            padding-left:0.2rem ;
+            .icon-sweep{
+                color: @font-color-M;
+                font-size:0.74rem; 
+                &:before{
+                   content: "\e620"; 
+                }
+            }
+        }
+        .cartHead-right{
+            width: 1rem;
+            padding-top:0.2rem ;
+            padding-right:0.2rem ;
+            .icon-delete{
+                color: @font-color-M;
+                font-size:0.74rem; 
+                &:before{
+                   content: "\e606"; 
+                }
+            }
+        }
+        .cartHead-title{
+            flex: 1;
+            font-size:@font-size-L;
+        }
+   } 
+   .cartHead-place{
+       height:1.4rem ;
+   }
+}
+
+
+.cartMain-box{
+    .carMian-list{
+        display: -webkit-box; 
+        display: -webkit-flex;
+        display: flex;
+        /*定义子元素垂直居中*/
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: @style-main;
+        padding: 0.2rem 0;
+        border-bottom: 1px solid #f1f1f1;
+        .carMian-list-left{
+            padding:0 0.2rem;
+            .iconfont{
+                
+            }
+            .icon-check-single{
+                color: @font-color-M;
+                font-size:0.74rem; 
+                /*line-height:1rem ;*/
+                color:@link-color;
+                font-size:0.5rem; 
+                border: 2px solid @style-main; 
+                border-radius:50%;  
+                &:before{
+                   content: "\e629"; 
+                }
+            }
+            .isCheckOn{
+                color:@link-color;
+            }
+            .isCheckOff{
+                color:@line-color;
+            }
+        }
+        .carMian-list-mid{
+            flex: 1;
+            .carMian-list-mid-main{
+                display: -webkit-box; 
+                display: -webkit-flex;
+                display: flex;
+                /*定义子元素垂直居中*/
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                img{
+                    width: 2.2rem;
+                    border: 1px solid #F1F1F1;
+                    margin-right: 0.2rem;    
+                }
+                .carMian-list-mid-info{
+                    flex: 1;
+                    text-align: left;
+                    font-family: "SimHei";
+                    
+                    .carMian-list-title{
+                       font-size: 0.39rem; 
+                       margin-bottom: 0.2rem;
+                    }
+                    .carMian-list-norms{
+                        color: @font-color-s;
+                    }
+                    .carMian-num-box{
+                        display: -webkit-box; 
+                        display: -webkit-flex;
+                        display: flex;
+                        /*定义子元素垂直居中*/
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        justify-content: center;
+                        align-items: center;
+                        width: 2.6rem;
+                        margin-top: 0.3rem;
+                        
+                        span{
+                            width:1rem ;
+                            .iconfont{
+                               font-size: 0.5rem; 
+                            }
+                            .icon-num-minus{
+                                color: @font-color-s;
+                                &:before{
+                                   content: "\e61c";  
+                                }
+                            }
+                            .icon-num-add{
+                                color: @font-color-s;
+                                &:before{
+                                    content: "\e61d"; 
+                                }
+                            }
+                        }
+                        input{
+                            font-family: "SimHei";
+                            flex: 1;
+                            width: 1.4rem;
+                            text-align: center;
+                            font-size: 0.4rem;
+                            color: @font-color-M;
+                        }
+                    }
+                }
+            }
+        }
+        .carMian-list-right{
+            margin-right: 0.2rem;
+            align-self: flex-end;
+            font-family: "SimHei";
+            div{
+                margin-top: 0.2rem;
+                em{color: @red-color; margin-left: 0.1rem;}
+            }
+        }
+    }
+}
+
+.CartFoot-box{
+    position: relative;   
+    .CartFoot-main{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 1rem;
+        padding: 0.3rem 0;
+        background: @style-main;
+        width: 100vw; 
+        display: -webkit-box; 
+        display: -webkit-flex;
+        display: flex;
+        /*定义子元素垂直居中*/
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .CartFoot-main-left{
+            vertical-align:middle;
+            line-height:1rem ;
+            padding-left: 0.3rem;
+            .icon-check-all{
+                line-height:1rem ;
+                color:@link-color;
+                font-size:0.5rem; 
+                padding-right: 0.2rem;
+                &:before{
+                   content: "\e629"; 
+                }
+            }
+            .isCheckOn{
+                color:@link-color;
+            }
+            .isCheckOff{
+                color:@line-color;
+            }
+        }
+        .CartFoot-main-total{
+            flex: 1;
+            
+            p{
+                margin-bottom: 0.16rem;
+                font-size: 0.4rem;
+                em{
+                    color: @red-color;
+                }
+            }
+        }
+        .CartFoot-main-right{
+            margin-right: 0.3rem;
+            background: #33BBEB;
+            font-size: 0.32rem;
+            color: @style-main;
+            padding: 0.32rem 0.7rem;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.cartHead-box{
+    .shadow {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.7);
+        position: fixed;
+        top: 0;
+        z-index: 50;
+        display: none;
+        transition:all .5s;
+    } 
+    .props{
+        /*opacity: 0;*/
+        -webkit-transition: opacity 0.5s linear;
+        transition: opacity 0.5s linear;
+        width: 6rem;
+        height: 3.6rem;
+        background: white;
+        border-radius: 0.2rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -2.5rem;
+        margin-left: -3rem;
+        z-index: 200;
+        display:none;
+        p{
+            text-align: center;
+            height: 1.0rem;
+            font-family: "微软雅黑";
+            line-height: 1rem;
+        }
+       .top{
+           font-size: 0.4rem;
+           color: #666666;
+           font-weight: 500;
+           border-bottom: 1px solid gainsboro;
+       }
+        .center{
+           font-size: 0.34rem;
+           color: #333333;
+           font-weight: 500;
+           margin-top: 0.18rem;  
+           
+        }
+        .bottom{
+            border-top: 1px solid gainsboro; 
+            padding: 0.2rem;
+            box-sizing: border-box;
+            margin-top: 0.12rem;
+            height: 1.3rem; 
+            span{
+                display: inline-block;
+                width: 48%;
+                height: 0.8rem;
+                text-align: center; 
+                font-size: 0.38rem;   
+            }
+            .OK{
+                    color: #0894ec;
+                    position: relative;
+                }
+            .OK:before{
+                content: "|";
+                position: absolute;
+                left: 0;
+                color: #969896;
+            }
+        }    
+    }
+}

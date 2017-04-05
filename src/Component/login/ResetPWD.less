@@ -1,0 +1,57 @@
+/*
+    底部菜单栏
+*/
+@import '../../Style/style.less';
+/*
+    @style-bg: #efeff4;
+    @style-main : #fff;
+    @style-color: #2c3e50;
+    @font-color-L:#333;
+    @font-color-M:#666;
+    @font-color-s:#999;
+    @link-color:#0894ec;
+    @line-color:#e3e3e3;
+    @red-color:#ff5e43;
+    @font-size-XL:0.5rem;
+    @font-size-L:0.4rem;
+    @font-size-M:0.2rem;
+    @font-size-S:0.18rem;
+    @font-size-SM:0.14rem;
+*/
+.ResetPWDHead-box{    
+    .ResetPWDHead-list{
+        background: @style-main;
+        width: 100vw;
+        margin-bottom: 0.1rem;
+        input{
+            height: 1rem;
+            line-height: 1rem;
+            padding: 0.4rem 0.2rem;
+            font-size: 0.4rem;
+            width: 90vw;
+            color: @font-color-s;
+        }
+    }
+}
+.ResetPWDMain-box{
+    position: fixed;
+    left:0;
+    bottom: 0;   
+    div{
+        display: -webkit-box; 
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: @style-main;
+        height: 1.5rem;
+        width: 100vw;
+        input{
+            font-family: "SimHei";
+            background: @blue-button;
+            color: @style-main;
+            padding: 0.24rem 1.4rem;
+            border-radius: 0.5rem;
+        }
+    }
+}

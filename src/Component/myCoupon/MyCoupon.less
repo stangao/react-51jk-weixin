@@ -1,0 +1,319 @@
+/*
+    底部菜单栏
+*/
+@import '../../Style/style.less';
+/*
+    @style-bg: #efeff4;
+    @style-main : #fff;
+    @style-color: #2c3e50;
+    @font-color-L:#333;
+    @font-color-M:#666;
+    @font-color-s:#999;
+    @link-color:#0894ec;
+    @line-color:#e3e3e3;
+    @red-color:#ff5e43;
+    @font-size-XL:0.5rem;
+    @font-size-L:0.4rem;
+    @font-size-M:0.2rem;
+    @font-size-S:0.18rem;
+    @font-size-SM:0.14rem;
+*/
+
+.MyCouponHead-box{
+  padding: 0.2rem;
+  background: @style-main;
+  font-family: "微软雅黑";
+  font-size: 0.36rem;
+  p{
+      line-height: 1rem;
+      color:@font-color-M;
+      display:flex;
+      justify-content: center;
+      align-content: center;
+      span{
+          color: @font-color-M;
+          padding: 0 0.2rem 0 0.4rem;
+      }
+  }
+}
+.MyCouponHead-hidden {
+    display: none;
+    background: @style-main;
+    margin-top: 0.03rem;
+    font-size: 0.29rem;
+    padding: 0.2rem;
+   .MyCouponHead-btn{
+       margin-left: -0.68rem;
+       display: flex;
+       justify-content: space-between;
+       span:hover{
+           background: #33bceb;
+           color: @style-main;
+       }
+       span{
+           display: flex;
+           justify-content: center;
+           line-height: 0.81rem;
+           width: 2.66rem;
+           height: 0.81rem;
+           margin-left: 0.68rem;
+           border: solid 0.03rem #ededed;
+       }
+   }
+}
+
+
+
+.myCouponReceive-box{
+ margin: 0.26rem 0.32rem;
+ padding: 0.2rem;
+ background: @style-main;
+ font-family: "微软雅黑";
+ font-size:0.29rem ;
+ p{
+     line-height: 0.5rem;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     a{
+         color: #33bceb;
+         padding-left: 0.29rem;
+     }
+ }
+}
+
+.myCouponMain-box{
+    padding:0 0.2rem 0.2rem 0.2rem;
+    font-size: 0.29rem;
+    font-family: "微软雅黑";
+    .myCouponMain-title{
+        margin-bottom:0.3rem;
+        padding: 0 0.1rem;
+    }
+    .myCouponMain-list {
+        background: @style-main;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0.2rem;
+        .myCoupon-left{
+        position: relative;        
+        background: @style-main;
+        height: 2.66rem;
+        .icon-youhuiquan-zuosekuai {
+            font-size: 2.66rem;
+            position: relative;
+            top: -0.2rem;
+            z-index: 1;
+            .icon-title {
+                width: 2.65rem;
+                left: 0;
+                position: absolute;
+                text-align: center;
+                font-size: 0.29rem;
+                z-index: 999;
+                top: 0.35rem;
+                color: @style-main;
+            }
+            .icon-leftline {
+                position: absolute;
+                z-index: 999;
+                width: 0.65rem;
+                height: 0.02rem;
+                background: @style-main;
+                left: 0.34rem;               
+                top: 1.05rem
+            }
+            .icon-rightline {
+                position: absolute;
+                z-index: 999;
+                width: 0.65rem;
+                height: 0.02rem;
+                background: @style-main;
+                left: 1.7rem;               
+                top: 1.05rem
+            }
+            .icon-bottom {
+                position: absolute;
+                left: 0;
+                width: 2.65rem;
+                text-align: center;
+                font-size: 0.53rem;
+                z-index: 999;
+                bottom: 0.53rem;
+                color: @style-main;
+                b{
+                    font-size: 1.19rem;
+                }
+            }
+            
+        }
+        .icon-youhuiquan-zuosekuaixianjie {
+            position: absolute;
+            top: -0.2rem;
+            left: 1.35rem;
+            font-size: 2.66rem;
+            color: @style-main;
+        }
+    }
+        .myCoupon-right{
+            height: 2.14rem;
+            flex: 1;
+            position: relative;
+            padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+            .p-top {
+                color: @font-color-L;
+                font-size: 0.3rem;
+                max-width: 4.8rem;
+                max-height: 0.8rem;
+                line-height: 0.4rem;
+                word-break: break-word;
+                overflow: hidden;
+            }
+            .p-mid {
+                margin-top: 0.1rem;
+            }
+            .p-bottom {
+            font-size: 0.23rem;
+            color: #808080;
+            margin-top:0.2rem ;
+            }
+            .expired-time {
+            position: absolute;
+            font-size: 0.29rem;
+            bottom: 0;
+                span {
+                    color: #ff3333;
+                }
+            }
+            .p-button {
+            height: 0.55rem;
+            width: 1.55rem;
+            text-align: center;
+            line-height: 0.55rem;
+            position: absolute;
+            background: #33bceb;
+            border-radius: 0.04rem;
+            color: @style-main;
+            top: 0.2rem;
+            right: 0.2rem;
+        }
+        }
+    }
+}
+
+/*
+    红色快
+*/
+.myCouponMain-list {
+    .myCoupon-left {
+         .icon-red{
+            color:#ff3333;
+        }
+    }
+}
+/*
+    橘色快
+*/
+.myCouponMain-list {
+    .myCoupon-left {
+         .icon-orange{
+            color:#ff9945;
+        }
+    }
+}
+/*
+    青色快
+*/
+.myCouponMain-box{
+.myCouponMain-list {
+    .myCoupon-left {
+         .icon-navy{
+            color:#39cbc0;
+            .icon-bottom{
+                width: 2.65rem;
+                height: 1.55rem;
+                position: absolute;
+                top: 1.3rem;
+                left: 0rem;
+                sup{
+                    position: absolute;
+                    top: 0.5rem;
+                    left: 0.4rem;
+                    font-size: 0.53rem;
+                }
+                sub {
+                    position: absolute;
+                    left: 0.2rem;
+                    bottom: 0.5rem;
+                    font-size: 0.26rem;
+                }
+                b{
+                    position: absolute;
+                    right: 0.2rem;
+                }
+            }
+        }
+    }
+}}
+/*
+    蓝色快包邮
+*/
+.myCouponMain-list {
+    .myCoupon-left {
+         .icon-blue{
+            color:#33bceb;
+            .icon-bottom {
+                b.shipping{
+                    font-size: 0.99rem;
+                    width: 2.65rem;
+                    
+                }
+            }
+        }
+    }
+    
+}
+
+/*
+    已使用
+*/
+.myCouponMain-list {
+    .myCoupon-left {
+         .icon-gray{
+            color:#cccccc;
+        }
+    }
+    .myCoupon-right{
+        .icon-icon-yishiyong{
+            position: absolute;
+            right: 0.3rem;
+            top: 0.2rem;
+            font-size: 2rem;
+            color: #cccccc;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
